@@ -1,5 +1,5 @@
 'use client'
-import { Space, Table, Tag } from 'antd';
+import { Card, Space, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 
 interface DataType {
@@ -83,6 +83,11 @@ const data: DataType[] = [
   },
 ];
 
-const App: React.FC = () => <Table columns={columns} dataSource={data} />;
+const App: React.FC = () =><Space direction="vertical" size="middle" style={{ display: 'flex' }}>
+    <Card title="Productos" size="default">
+    <Table columns={columns} dataSource={data} />
+    </Card>
+    
+  </Space> ;
 
 export default App;
